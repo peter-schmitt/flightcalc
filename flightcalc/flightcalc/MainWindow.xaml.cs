@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using flightcalc.context;
 
 namespace flightcalc
 {
@@ -11,9 +12,12 @@ namespace flightcalc
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Config config;
+
         public MainWindow()
         {
             InitializeComponent();
+            config = new Config();
         }
 
         private void button_calculate_Click(object sender, RoutedEventArgs e)
