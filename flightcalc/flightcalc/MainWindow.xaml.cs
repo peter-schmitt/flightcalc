@@ -97,9 +97,9 @@ namespace flightcalc
             }
         }
 
-        /***
-            Find all Elements on this window with of a certain type
-        ***/
+        /// <summary>
+        /// Find all Elements on this window with of a certain type
+        /// </summary>
         private static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
             if (depObj != null)
@@ -120,9 +120,9 @@ namespace flightcalc
             }
         }
 
-        /***
-            Reset all textboxes and labels
-        ***/
+        /// <summary>
+        /// Reset all textboxes and labels
+        /// </summary>
         private void button_clear_Click(object sender, RoutedEventArgs e)
         {
             foreach (TextBox textbox in FindVisualChildren<TextBox>(this))
