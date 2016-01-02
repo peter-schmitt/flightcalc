@@ -37,7 +37,7 @@
                     <TextBox x:Name="textBox_resultDistanceTravelled" HorizontalAlignment="Left" Height="23" Margin="95,30,0,-1" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="The distance covered while descending"/>
                     <Label x:Name="label14" Content="mi" HorizontalAlignment="Left" Margin="189,26,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
                     <Label x:Name="label15" Content="Time travld" HorizontalAlignment="Left" Margin="0,52,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <TextBox x:Name="textBox_resultsTimeTravelled" HorizontalAlignment="Left" Height="23" Margin="95,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Time until targeted altitude is reached"/>
+                    <TextBox x:Name="textBox_resultTimeTravelled" HorizontalAlignment="Left" Height="23" Margin="95,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Time until targeted altitude is reached"/>
                     <Label x:Name="label16" Content="min" HorizontalAlignment="Left" Margin="189,52,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
                     <Label x:Name="label17" Content="Desired ROD" HorizontalAlignment="Left" Margin="5,78,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="textBox_resultROD" HorizontalAlignment="Left" Height="23" Margin="95,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89"/>

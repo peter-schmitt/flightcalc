@@ -18,17 +18,46 @@ namespace backend
         }
 
         /***
+            This function returns the difference altitude
+        ***/
+        private static int d_alt(int start_alt, int target_alt)
+        {
+            return target_alt - start_alt;
+        }
+
+        /***
             This function returns the rate of descent in ft/min for a given speed, altitude difference and descent distance
         ***/
         public static int calculate_rate_of_descent(int IAS, int alt, int target_alt, int target_distance)
         {
-            int dalt = alt - target_alt;
+            // distance travelled per minute
             int dpmin = dp_min(IAS);
 
+            // time to travel the desired distance
             double dt = target_distance / dpmin;
-            double rod = dalt / dt;
+            // desired rate of descent
+            double rod = d_alt(alt, target_alt) / dt;
 
             return (int)rod;
+        }
+
+        /***
+            This fuction calculates the time in minutes to reach the target altitude with a given rate of descent.
+        ***/
+        public static int calculate_time_to_target_altitude(int alt, int target_alt, int target_rod)
+        {
+            double descent_time = d_alt(alt, target_alt) / target_rod;
+
+            // minutes can never be negative, therefore only absolute values are allowed
+            return (int)Math.Abs(descent_time);
+        }
+
+        /***
+            This fuction calculates the distance in miles to reach the target altitude with a given rate of descent.
+        ***/
+        public static int calculate_distance_to_target_altitude(int IAS, int alt, int target_alt, int target_rod)
+        {
+            return calculate_time_to_target_altitude(alt, target_alt, target_rod) * dp_min(IAS);
         }
     }
 }

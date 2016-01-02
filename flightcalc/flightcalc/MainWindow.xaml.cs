@@ -40,21 +40,50 @@ namespace flightcalc
             bool targetDistanceset = Int32.TryParse(this.textBox_targetDistance.Text, out targetDistance);
             bool targetRODset = Int32.TryParse(this.textBox_targetRateOfDescent.Text, out targetROD);
 
+            // Any calculations possible with the input data?
+            bool calculation_possible = false;
+
+            // resetting error label
             string errorLabelText = "";
             this.errorLabel.Visibility = Visibility.Hidden;
 
-
+            if (currentIASset)
+            {
+                this.textBox_resultSpeed.Text = backend.ToD_ToC_calculations.dp_min(currentIAS).ToString();
+            }
 
             if (currentIASset && currentAltset && targetAltset && targetDistanceset)
             {
                 this.textBox_resultSpeed.Text = backend.ToD_ToC_calculations.dp_min(currentIAS).ToString();
                 this.textBox_resultROD.Text = backend.ToD_ToC_calculations.calculate_rate_of_descent(currentIAS,currentAlt,targetAlt,targetDistance).ToString();
-                return;
+                calculation_possible = true;
             }
 
-            errorLabelText = "Incorrect IAS given.";
-            this.errorLabel.Content = errorLabelText;
-            this.errorLabel.Visibility = Visibility.Visible;
+            if (currentAltset && targetAltset && targetRODset)
+            {
+                this.textBox_resultTimeTravelled.Text = backend.ToD_ToC_calculations.calculate_time_to_target_altitude(currentAlt, targetAlt, targetROD).ToString();
+                calculation_possible = true;
+            }
+
+            if (currentIASset && currentAltset && targetAltset && targetRODset)
+            {
+                this.textBox_resultDistanceTravelled.Text = backend.ToD_ToC_calculations.calculate_distance_to_target_altitude(currentIAS, currentAlt, targetAlt, targetROD).ToString();
+                calculation_possible = true;
+            }
+
+
+            // Error message must only be shown, if nothing can be calculated.
+            if (calculation_possible)
+            {
+                return;
+            }
+            else
+            {
+                errorLabelText = "Insufficient Data!";
+                this.errorLabel.Content = errorLabelText;
+                this.errorLabel.Visibility = Visibility.Visible;
+                return;
+            }
         }
     }
 }
