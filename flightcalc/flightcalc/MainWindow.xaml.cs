@@ -43,6 +43,13 @@ namespace flightcalc
             // Any calculations possible with the input data?
             bool calculation_possible = false;
 
+            // setting default text values for not calculated values
+            this.textBox_resultSpeed.Text = "x";
+            this.textBox_resultDistanceTravelled.Text = "x";
+            this.textBox_resultTimeTravelled.Text = "x";
+            this.textBox_resultROD.Text = "x";
+            this.textBox_resultROD3deg.Text = "x";
+
             // resetting error label
             string errorLabelText = "";
             this.errorLabel.Visibility = Visibility.Hidden;
@@ -68,6 +75,12 @@ namespace flightcalc
             if (currentIASset && currentAltset && targetAltset && targetRODset)
             {
                 this.textBox_resultDistanceTravelled.Text = backend.ToD_ToC_calculations.calculate_distance_to_target_altitude(currentIAS, currentAlt, targetAlt, targetROD).ToString();
+                calculation_possible = true;
+            }
+
+            if (currentIASset)
+            {
+                this.textBox_resultROD3deg.Text = backend.ToD_ToC_calculations.calculate_rate_of_descent(currentIAS).ToString();
                 calculation_possible = true;
             }
 

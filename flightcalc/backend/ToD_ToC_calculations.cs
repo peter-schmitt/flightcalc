@@ -42,6 +42,16 @@ namespace backend
         }
 
         /***
+            This function returns descent rate for 3° standard glide path for current speed.
+        ***/
+        public static int calculate_rate_of_descent(int IAS)
+        {
+            // ROD = 5.307 * IAS found under http://walter.bislins.ch/blog/index.asp?page=Aviatik+Faustformel%3A+Sinkrate+auf+dem+Gleitpfad
+            // * -1 to get a negative result for descent.
+            return (int)(5.307 * IAS)* -1;
+        }
+
+        /***
             This fuction calculates the time in minutes to reach the target altitude with a given rate of descent.
         ***/
         public static int calculate_time_to_target_altitude(int alt, int target_alt, int target_rod)
