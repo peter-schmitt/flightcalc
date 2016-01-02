@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="521.153" Width="299.038">
     <TabControl x:Name="tabControl" Margin="0,0,2,-4">
-        <TabItem x:Name="ToC_ToD" Header="ToD" Height="22" VerticalAlignment="Top">
+        <TabItem x:Name="ToC_ToD" Header="ToD/ToC" Margin="-2,-2,-2,2">
             <Grid Background="#FFE5E5E5" Margin="0,0,0,-1">
-                <Label x:Name="label" Content="Top of Descent" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label" Content="Top of Descent/Climb" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                 <Grid Margin="22,61,0,215">
                     <TextBox x:Name="textBox_currentIAS" HorizontalAlignment="Left" Height="22" Margin="95,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Current Indicated Airspeed"/>
                     <Label x:Name="label1" Content="IAS" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1"/>
