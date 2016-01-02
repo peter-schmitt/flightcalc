@@ -51,8 +51,7 @@ namespace flightcalc
             this.textBox_resultROD3deg.Text = "x";
 
             // resetting error label
-            string errorLabelText = "";
-            this.errorLabel.Visibility = Visibility.Hidden;
+            this.textBlock_statusBar_ToDToC.Text = "";
 
             if (currentIASset)
             {
@@ -92,9 +91,8 @@ namespace flightcalc
             }
             else
             {
-                errorLabelText = "Insufficient Data!";
-                this.errorLabel.Content = errorLabelText;
-                this.errorLabel.Visibility = Visibility.Visible;
+                string errorLabelText = "Insufficient Data!";
+                this.textBlock_statusBar_ToDToC.Text = errorLabelText;
                 return;
             }
         }
