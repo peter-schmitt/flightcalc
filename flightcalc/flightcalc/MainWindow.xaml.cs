@@ -1,18 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using backend;
 
 namespace flightcalc
 {
@@ -55,31 +45,31 @@ namespace flightcalc
 
             if (currentIASset)
             {
-                this.textBox_resultSpeed.Text = backend.ToD_ToC_calculations.dp_min(currentIAS).ToString();
+                this.textBox_resultSpeed.Text = backend.ToD_ToC_calculations.ToD_ToC_calculations.dp_min(currentIAS).ToString();
             }
 
             if (currentIASset && currentAltset && targetAltset && targetDistanceset)
             {
-                this.textBox_resultSpeed.Text = backend.ToD_ToC_calculations.dp_min(currentIAS).ToString();
-                this.textBox_resultROD.Text = backend.ToD_ToC_calculations.calculate_rate_of_descent(currentIAS,currentAlt,targetAlt,targetDistance).ToString();
+                this.textBox_resultSpeed.Text = backend.ToD_ToC_calculations.ToD_ToC_calculations.dp_min(currentIAS).ToString();
+                this.textBox_resultROD.Text = backend.ToD_ToC_calculations.ToD_ToC_calculations.calculate_rate_of_descent(currentIAS,currentAlt,targetAlt,targetDistance).ToString();
                 calculation_possible = true;
             }
 
             if (currentAltset && targetAltset && targetRODset)
             {
-                this.textBox_resultTimeTravelled.Text = backend.ToD_ToC_calculations.calculate_time_to_target_altitude(currentAlt, targetAlt, targetROD).ToString();
+                this.textBox_resultTimeTravelled.Text = backend.ToD_ToC_calculations.ToD_ToC_calculations.calculate_time_to_target_altitude(currentAlt, targetAlt, targetROD).ToString();
                 calculation_possible = true;
             }
 
             if (currentIASset && currentAltset && targetAltset && targetRODset)
             {
-                this.textBox_resultDistanceTravelled.Text = backend.ToD_ToC_calculations.calculate_distance_to_target_altitude(currentIAS, currentAlt, targetAlt, targetROD).ToString();
+                this.textBox_resultDistanceTravelled.Text = backend.ToD_ToC_calculations.ToD_ToC_calculations.calculate_distance_to_target_altitude(currentIAS, currentAlt, targetAlt, targetROD).ToString();
                 calculation_possible = true;
             }
 
             if (currentIASset)
             {
-                this.textBox_resultROD3deg.Text = backend.ToD_ToC_calculations.calculate_rate_of_descent(currentIAS).ToString();
+                this.textBox_resultROD3deg.Text = backend.ToD_ToC_calculations.ToD_ToC_calculations.calculate_rate_of_descent(currentIAS).ToString();
                 calculation_possible = true;
             }
 

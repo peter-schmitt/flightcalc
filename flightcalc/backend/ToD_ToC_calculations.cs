@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Math;
 
-namespace backend
+namespace backend.ToD_ToC_calculations
 {
     public static class ToD_ToC_calculations
     {
@@ -48,7 +48,7 @@ namespace backend
         {
             // ROD = 5.307 * IAS found under http://walter.bislins.ch/blog/index.asp?page=Aviatik+Faustformel%3A+Sinkrate+auf+dem+Gleitpfad
             // * -1 to get a negative result for descent.
-            return (int)(5.307 * IAS)* -1;
+            return (int)(5.307 * IAS) * -1;
         }
 
         /// <summary>
@@ -70,4 +70,5 @@ namespace backend
             return calculate_time_to_target_altitude(alt, target_alt, target_rod) * dp_min(IAS);
         }
     }
+
 }
