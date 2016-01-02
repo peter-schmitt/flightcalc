@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:flightcalc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="517.153" Width="293.038">
-    <TabControl x:Name="tabControl" Margin="0,0,2,-4">
+        Title="FlightCalc" MinHeight="499" Height="499" MinWidth="293" Width="293" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <TabControl x:Name="tabControl">
         <TabItem x:Name="ToC_ToD" Header="ToD/ToC" Margin="-2,-2,-2,2">
-            <Grid Background="#FFE5E5E5" Margin="0,0,0,-1">
-                <Label x:Name="label" Content="Top of Descent/Climb" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <Grid Margin="22,61,0,215">
+            <Grid Background="#FFE5E5E5" Margin="0">
+                <Label x:Name="label" Content="Top of Descent/Climb" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top"/>
+                <Grid Margin="15,40,10,0" VerticalAlignment="Top">
                     <TextBox x:Name="textBox_currentIAS" HorizontalAlignment="Left" Height="22" Margin="95,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Current Indicated Airspeed"/>
                     <Label x:Name="label1" Content="IAS" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1"/>
                     <Label x:Name="label2" Content="Altitude" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
@@ -27,9 +27,9 @@
                     <TextBox x:Name="textBox_targetRateOfDescent" HorizontalAlignment="Left" Height="23" Margin="125,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" ToolTip="The rate of descent that is aimed for"/>
                     <Label x:Name="label12" Content="ft/min" HorizontalAlignment="Left" Margin="189,104,0,0" VerticalAlignment="Top"/>
                 </Grid>
-                <GroupBox x:Name="groupBox" Header="Input" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Height="193" Width="260" Panel.ZIndex="-1"/>
-                <GroupBox x:Name="groupBox1" Header="Results" HorizontalAlignment="Left" Margin="9,234,0,0" VerticalAlignment="Top" Height="167" Width="260" Panel.ZIndex="-1"/>
-                <Grid Margin="21,255,14,66" Panel.ZIndex="1">
+                <GroupBox x:Name="groupBox" Header="Input" Margin="10,26,10,0" VerticalAlignment="Top" Height="159" Panel.ZIndex="-1"/>
+                <GroupBox x:Name="groupBox1" Header="Results" Margin="10,190,10,0" VerticalAlignment="Top" Height="167" Panel.ZIndex="-1"/>
+                <Grid Margin="15,204,10,66" Panel.ZIndex="1" VerticalAlignment="Top">
                     <Label x:Name="label9" Content="Speed" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1"/>
                     <TextBox x:Name="textBox_resultSpeed" HorizontalAlignment="Left" Height="23" Margin="95,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Speed in miles/minute"/>
                     <Label x:Name="label10" Content="mi/min" HorizontalAlignment="Left" Margin="189,0,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
@@ -46,8 +46,8 @@
                     <TextBox x:Name="textBox_resultROD3deg" HorizontalAlignment="Left" Height="23" Margin="95,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89"/>
                     <Label x:Name="label18_Copy" Content="ft/min" HorizontalAlignment="Left" Margin="189,104,0,0" VerticalAlignment="Top"/>
                 </Grid>
-                <Button x:Name="button_calculate" Content="Calculate" HorizontalAlignment="Left" Margin="10,406,0,0" VerticalAlignment="Top" Width="75" Click="button_calculate_Click"/>
-                <Button x:Name="button_clear" Content="Clear" HorizontalAlignment="Left" Margin="90,406,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="button_calculate" Content="Calculate" HorizontalAlignment="Left" Margin="10,365,0,0" VerticalAlignment="Top" Width="75" Click="button_calculate_Click"/>
+                <Button x:Name="button_clear" Content="Clear" HorizontalAlignment="Left" Margin="90,365,0,0" VerticalAlignment="Top" Width="75"/>
                 <StatusBar x:Name="statusBar_ToDToC" VerticalAlignment="Bottom">
                     <TextBlock x:Name="textBlock_statusBar_ToDToC" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                 </StatusBar>
