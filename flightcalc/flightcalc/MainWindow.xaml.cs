@@ -85,11 +85,7 @@ namespace flightcalc
 
 
             // Error message must only be shown, if nothing can be calculated.
-            if (calculation_possible)
-            {
-                return;
-            }
-            else
+            if (!calculation_possible)
             {
                 string errorLabelText = "Insufficient Data!";
                 this.textBlock_statusBar_ToDToC.Text = errorLabelText;
