@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using flightcalc.context;
+using backend.context;
 
 namespace flightcalc
 {
@@ -45,7 +45,7 @@ namespace flightcalc
             this.textBox_resultROD3deg.Text = "x";
 
             // resetting error label
-            this.textBlock_statusBar_ToDToC.Text = "";
+            this.textBlock_statusBar.Text = "";
 
             if (currentIASset)
             {
@@ -82,7 +82,7 @@ namespace flightcalc
             if (!calculation_possible)
             {
                 string errorLabelText = "Insufficient Data!";
-                this.textBlock_statusBar_ToDToC.Text = errorLabelText;
+                this.textBlock_statusBar.Text = errorLabelText;
                 return;
             }
         }
@@ -120,7 +120,12 @@ namespace flightcalc
                 textbox.Text = "";
             }
 
-            this.textBlock_statusBar_ToDToC.Text = "";
+            this.textBlock_statusBar.Text = "";
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.textBlock_statusBar.Text = "Retrieving Data, please wait...";
         }
     }
 }

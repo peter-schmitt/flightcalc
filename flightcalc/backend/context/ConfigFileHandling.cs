@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace flightcalc.context
+namespace backend.context
 {
     /// <summary>
     /// This class handles reading and writing the config file

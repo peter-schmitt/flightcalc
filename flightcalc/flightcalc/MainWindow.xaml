@@ -55,15 +55,15 @@
                 <Grid Background="#FFE5E5E5">
                     <Grid Margin="10,10,15,0" VerticalAlignment="Top" Height="60">
                         <ComboBox x:Name="comboBox" Margin="10,41,10,-3" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                        <Button x:Name="button" Content="Load Data" HorizontalAlignment="Left" Margin="169,18,0,0" VerticalAlignment="Top" Width="75" Panel.ZIndex="1"/>
+                        <Button x:Name="button" Content="Load Data" HorizontalAlignment="Left" Margin="169,18,0,0" VerticalAlignment="Top" Width="75" Panel.ZIndex="1" Click="button_Click"/>
                         <Label x:Name="label20" Content="Type:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
                         <GroupBox x:Name="groupBox2" Header="FSE Aircraft Data" Margin="0,0,0,-10"/>
                     </Grid>
                 </Grid>
             </TabItem>
         </TabControl>
-        <StatusBar x:Name="statusBar_ToDToC" VerticalAlignment="Bottom" Margin="0" Height="22">
-            <TextBlock x:Name="textBlock_statusBar_ToDToC" TextWrapping="Wrap" Margin="0" Height="22" Width="279"/>
+        <StatusBar x:Name="statusBar" VerticalAlignment="Bottom" Margin="0" Height="22">
+            <TextBlock x:Name="textBlock_statusBar" TextWrapping="Wrap" Margin="0" Height="22" Width="279"/>
         </StatusBar>
     </Grid>
 </Window>
