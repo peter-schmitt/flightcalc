@@ -130,7 +130,8 @@ namespace flightcalc
         {
             this.textBlock_statusBar.Text = "Retrieving Data, please wait...";
             fuelcalc.populateAircraftData();
-            this.textBlock_statusBar.Text = "Data_retrieved.";
+            this.textBlock_statusBar.Text = "Data retrieved";
+            this.comboBox_Fuel_AirplaneSelection.ItemsSource = fuelcalc.aircraftDict.Keys;
         }
     }
 }

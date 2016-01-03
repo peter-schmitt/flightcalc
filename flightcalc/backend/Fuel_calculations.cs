@@ -11,7 +11,7 @@ namespace backend.Fuel_calculations
 {
     public class Fuel_calculations
     {
-        private Dictionary<string, Aircraft> aircraftDict = new Dictionary<string, Aircraft>();
+        public Dictionary<string, Aircraft> aircraftDict = new Dictionary<string, Aircraft>();
         Config config = Config.Instance();
 
         public Fuel_calculations()

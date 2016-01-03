@@ -10,7 +10,7 @@ namespace backend.DataTypes
     /// <summary>
     /// This class holds the definition of a single Airplane
     /// </summary>
-    class Aircraft
+    public class Aircraft
     {
 
         public string MakeModel { get; set; }

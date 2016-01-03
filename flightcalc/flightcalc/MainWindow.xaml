@@ -54,8 +54,8 @@
             <TabItem x:Name="Fuel" Header="Fuel">
                 <Grid Background="#FFE5E5E5">
                     <Grid Margin="10,10,15,0" VerticalAlignment="Top" Height="60">
-                        <ComboBox x:Name="comboBox" Margin="10,41,10,-3" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                        <Button x:Name="button" Content="Load Data" HorizontalAlignment="Left" Margin="169,18,0,0" VerticalAlignment="Top" Width="75" Panel.ZIndex="1" Click="button_Click"/>
+                        <ComboBox x:Name="comboBox_Fuel_AirplaneSelection" Margin="10,41,10,-3" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <Button x:Name="button_Fuel_LoadAirplaneData" Content="Load Data" HorizontalAlignment="Left" Margin="169,18,0,0" VerticalAlignment="Top" Width="75" Panel.ZIndex="1" Click="button_Click"/>
                         <Label x:Name="label20" Content="Type:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
                         <GroupBox x:Name="groupBox2" Header="FSE Aircraft Data" Margin="0,0,0,-10"/>
                     </Grid>
