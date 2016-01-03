@@ -43,7 +43,7 @@ namespace backend.DataTypes
             Seats = dict["Seats"];
             CruiseSpeed = dict["CruiseSpeed"];
             GPH = dict["GPH"];
-            FuelType = dict["FuelType"];
+            FuelType = dict["FuelType"].Equals("0") ? "Avgas (100LL)" : "Jet A";
             MTOW = dict["MTOW"];
             EmptyWeight = dict["EmptyWeight"];
             Price = dict["Price"];
@@ -97,6 +97,16 @@ namespace backend.DataTypes
             Int32.TryParse(Ext2, out Ext2int);
 
             return Ext1int + LTipint + LAuxint + LMainint + Center1int + Center2int + Center3int + RMainint + RAuxint + RTipint + Ext2int;
+        }
+
+        public int maxRange()
+        {
+            int fuelFlow;
+            Int32.TryParse(GPH, out fuelFlow);
+
+            int cruiseSpeed;
+            Int32.TryParse(CruiseSpeed, out cruiseSpeed);
+            return (int)(summarizedFuelQuantity() / fuelFlow)*cruiseSpeed;
         }
     }
 }

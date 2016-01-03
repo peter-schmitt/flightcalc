@@ -53,18 +53,20 @@
             </TabItem>
             <TabItem x:Name="Fuel" Header="Fuel">
                 <Grid Background="#FFE5E5E5">
-                    <Grid Margin="15,10,10,0" VerticalAlignment="Top" Height="176">
+                    <Grid Margin="15,10,10,0" VerticalAlignment="Top" Height="207">
                         <ComboBox x:Name="comboBox_Fuel_AirplaneSelection" Margin="10,41,10,-3" VerticalAlignment="Top" Panel.ZIndex="1" SelectionChanged="comboBox_Fuel_AirplaneSelection_SelectionChanged"/>
                         <Button x:Name="button_Fuel_LoadAirplaneData" Content="Load Data" HorizontalAlignment="Left" Margin="169,18,0,0" VerticalAlignment="Top" Width="75" Panel.ZIndex="1" Click="button_Click"/>
                         <Label x:Name="label20" Content="Type:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
                         <Label x:Name="label21" Content="Fuel Type" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1" Margin="10,68,0,0" Width="80"/>
                         <Label x:Name="label22" Content="Fuel Capacity" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
                         <Label x:Name="label23" Content="Fuel Flow" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Width="80"/>
-                        <Label x:Name="label24" Content="Cruise Speed" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="80"/>
+                        <Label x:Name="label24" Content="Cruise Speed" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top" Width="80"/>
                         <Label x:Name="label_fuelType" Content="" HorizontalAlignment="Right" Margin="0,68,10,0" VerticalAlignment="Top"/>
                         <Label x:Name="label_fuelCapacity" Content="" HorizontalAlignment="Right" Margin="0,94,10,0" VerticalAlignment="Top"/>
                         <Label x:Name="label_fuelFlow" Content="" HorizontalAlignment="Right" Margin="0,120,10,0" VerticalAlignment="Top"/>
-                        <Label x:Name="label_CruiseSpeed" Content="" HorizontalAlignment="Right" Margin="0,146,10,0" VerticalAlignment="Top"/>
+                        <Label x:Name="label_CruiseSpeed" Content="" HorizontalAlignment="Right" Margin="0,172,10,0" VerticalAlignment="Top"/>
+                        <Label x:Name="label25" Content="Max Range" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="80"/>
+                        <Label x:Name="label_MaxRange" Content="" HorizontalAlignment="Right" Margin="0,146,10,0" VerticalAlignment="Top"/>
                         <GroupBox x:Name="groupBox2" Header="FSE Aircraft Data" Margin="0,0,0,-10"/>
                     </Grid>
                 </Grid>

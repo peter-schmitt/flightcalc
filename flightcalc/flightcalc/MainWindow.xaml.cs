@@ -142,6 +142,7 @@ namespace flightcalc
             this.label_fuelType.Content = currentAircraft.FuelType;
             this.label_fuelCapacity.Content = currentAircraft.summarizedFuelQuantity().ToString() + " gal";
             this.label_fuelFlow.Content = currentAircraft.GPH + " gal/h";
+            this.label_MaxRange.Content = currentAircraft.maxRange().ToString() + " NM";
             this.label_CruiseSpeed.Content = currentAircraft.CruiseSpeed + " kts";
         }
     }
