@@ -14,23 +14,49 @@ namespace backend.FSEconomy
         private string rawStringAnswer;
         private XElement rawXMLAnswer;
 
-        // the result that is accessible from the outside
-        private Dictionary<string, string> XMLAnswerDict { get; set; }
+        private string headNodeName;
+        private string elementNodeName;
 
-        public FSEconomy_datafeed(string datafeed_url, string FSE_Access_Key, FSEconomy_enums.FSEconomy_datafeed_type datafeed_type)
+        // the result that is accessible from the outside
+        public List<Dictionary<string, string>> stringAnswerList { get; set; }
+
+        public FSEconomy_datafeed(string datafeedURL, string FSEAccessKey, FSEconomy_enums.FSEconomy_datafeed_type datafeedType)
         {
             // Datafeed urls are saved without userkey in config
-            string url = datafeed_url.Replace("%USERKEY%", FSE_Access_Key);
+            string url = datafeedURL.Replace("%USERKEY%", FSEAccessKey);
 
             // Getting the raw datafeed
             rawStringAnswer = (new WebClient()).DownloadString(url);
+
+            // some variables must be switched for the type of datafeed we use.
+            switch (datafeedType)
+            {
+                case FSEconomy_enums.FSEconomy_datafeed_type.AIRCRAFT_CONFIG:
+                    // topmost node wich is a single unit
+                    headNodeName = "AircraftConfigItems";
+                    elementNodeName = "AircraftConfig";
+                    break;
+                default:
+                    break;
+            }
+
+            stringAnswerList = new List<Dictionary<string, string>>();
+            translateXMLAnswerToDictList();
         }
 
-        private void translateXMLAnswerToDict()
+        private void translateXMLAnswerToDictList()
         {
-            rawXMLAnswer = XElement.Load(rawStringAnswer);
+            rawXMLAnswer = XElement.Parse(rawStringAnswer);
 
-
+            foreach (var aircraft in rawXMLAnswer.Elements())
+            {
+                Dictionary<string, string> tmpDict = new Dictionary<string, string>();
+                foreach (var el in aircraft.Elements()) {
+                    tmpDict.Add(el.Name.LocalName.ToString(), el.Value.ToString());
+                }
+                stringAnswerList.Add(tmpDict);
+                
+            }
         }
     }
 }

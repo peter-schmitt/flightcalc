@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="context\Config.cs" />
+    <Compile Include="context\ConfigFileHandling.cs" />
     <Compile Include="DataTypes\Aircraft.cs" />
     <Compile Include="FSEconomy\FSEconomy_datafeed.cs" />
     <Compile Include="FSEconomy\FSEconomy_enums.cs" />

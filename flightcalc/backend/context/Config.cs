@@ -9,11 +9,14 @@ namespace backend.context
 {
     /// <summary>
     /// This class handles configuration options
+    /// 
+    /// It is a singleton!
     /// </summary>
     public class Config
     {
         private ConfigFileHandling cfg_handling;
-        private Dictionary<string, string> configuration;
+        public Dictionary<string, string> configuration { get; set; }
+        private static Config instance;
 
         /// <summary>
         /// This function builds the config structure with defaults.
@@ -28,11 +31,25 @@ namespace backend.context
         /// <summary>
         /// Get config from file and load configuration dictionary.
         /// </summary>
-        public Config()
+        private Config()
         {
             cfg_handling = new ConfigFileHandling();
             configuration = cfg_handling.getConfigFileContent();
             createConfigStructure();
+        }
+
+        public static Config Instance()
+        {
+            if (instance == null)
+            {
+                instance = new Config();
+                return instance;
+            }
+            else
+            {
+                return instance;
+            }
+
         }
 
         ~Config()

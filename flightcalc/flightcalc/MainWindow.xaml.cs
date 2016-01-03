@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using backend.context;
+using backend.Fuel_calculations;
 
 namespace flightcalc
 {
@@ -13,11 +14,13 @@ namespace flightcalc
     public partial class MainWindow : Window
     {
         private Config config;
+        private Fuel_calculations fuelcalc;
 
         public MainWindow()
         {
             InitializeComponent();
-            config = new Config();
+            config = Config.Instance();
+            fuelcalc = new Fuel_calculations();
         }
 
         private void button_calculate_Click(object sender, RoutedEventArgs e)
@@ -126,6 +129,8 @@ namespace flightcalc
         private void button_Click(object sender, RoutedEventArgs e)
         {
             this.textBlock_statusBar.Text = "Retrieving Data, please wait...";
+            fuelcalc.populateAircraftData();
+            this.textBlock_statusBar.Text = "Data_retrieved.";
         }
     }
 }
