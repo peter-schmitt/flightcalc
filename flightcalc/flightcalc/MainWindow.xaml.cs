@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using backend.context;
 using backend.Fuel_calculations;
+using backend.DataTypes;
 
 namespace flightcalc
 {
@@ -132,6 +133,16 @@ namespace flightcalc
             fuelcalc.populateAircraftData();
             this.textBlock_statusBar.Text = "Data retrieved";
             this.comboBox_Fuel_AirplaneSelection.ItemsSource = fuelcalc.aircraftDict.Keys;
+        }
+
+        private void comboBox_Fuel_AirplaneSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Aircraft currentAircraft = fuelcalc.aircraftDict[this.comboBox_Fuel_AirplaneSelection.SelectedItem.ToString()];
+
+            this.label_fuelType.Content = currentAircraft.FuelType;
+            this.label_fuelCapacity.Content = currentAircraft.summarizedFuelQuantity().ToString() + " gal";
+            this.label_fuelFlow.Content = currentAircraft.GPH + " gal/h";
+            this.label_CruiseSpeed.Content = currentAircraft.CruiseSpeed + " kts";
         }
     }
 }

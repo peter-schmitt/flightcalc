@@ -61,5 +61,42 @@ namespace backend.DataTypes
             Engines = dict["Engines"];
             EnginePrice = dict["EnginePrice"];
         }
+
+        public int summarizedFuelQuantity()
+        {
+            int Ext1int;
+
+            int LTipint;
+            int LAuxint;
+            int LMainint;
+
+            int Center1int;
+            int Center2int;
+            int Center3int;
+
+            int RMainint;
+            int RAuxint;
+            int RTipint;
+
+            int Ext2int;
+
+            Int32.TryParse(Ext1, out Ext1int);
+
+            Int32.TryParse(LTip, out LTipint);
+            Int32.TryParse(LAux, out LAuxint);
+            Int32.TryParse(LMain, out LMainint);
+
+            Int32.TryParse(Center1, out Center1int);
+            Int32.TryParse(Center2, out Center2int);
+            Int32.TryParse(Center3, out Center3int);
+
+            Int32.TryParse(RMain, out RMainint);
+            Int32.TryParse(RAux, out RAuxint);
+            Int32.TryParse(RTip, out RTipint);
+
+            Int32.TryParse(Ext2, out Ext2int);
+
+            return Ext1int + LTipint + LAuxint + LMainint + Center1int + Center2int + Center3int + RMainint + RAuxint + RTipint + Ext2int;
+        }
     }
 }
