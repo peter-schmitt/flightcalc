@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FSEconomy\Aircraft.cs" />
+    <Compile Include="DataTypes\Aircraft.cs" />
+    <Compile Include="FSEconomy\FSEconomy_datafeed.cs" />
+    <Compile Include="FSEconomy\FSEconomy_enums.cs" />
+    <Compile Include="Fuel_calculations.cs" />
     <Compile Include="ToD_ToC_calculations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

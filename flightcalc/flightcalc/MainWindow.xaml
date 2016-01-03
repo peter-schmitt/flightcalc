@@ -6,55 +6,64 @@
         xmlns:local="clr-namespace:flightcalc"
         mc:Ignorable="d"
         Title="FlightCalc" MinHeight="499" Height="499" MinWidth="293" Width="293" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" HorizontalAlignment="Left" VerticalAlignment="Top">
-    <TabControl x:Name="tabControl">
-        <TabItem x:Name="ToC_ToD" Header="ToD/ToC" Margin="-2,-2,-2,2">
-            <Grid Background="#FFE5E5E5" Margin="0">
-                <Label x:Name="label" Content="Top of Descent/Climb" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top"/>
-                <Grid Margin="15,40,10,0" VerticalAlignment="Top">
-                    <TextBox x:Name="textBox_currentIAS" HorizontalAlignment="Left" Height="22" Margin="95,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Current Indicated Airspeed"/>
-                    <Label x:Name="label1" Content="IAS" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <Label x:Name="label2" Content="Altitude" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <TextBox x:Name="textBox_currentAlt" HorizontalAlignment="Left" Height="22" Margin="95,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Current altitude"/>
-                    <Label x:Name="label3" Content="ft" HorizontalAlignment="Left" Margin="189,26,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <Label x:Name="label4" Content="kn" HorizontalAlignment="Left" Margin="189,0,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <Label x:Name="label5" Content="Target altitude" HorizontalAlignment="Left" Margin="0,52,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <TextBox x:Name="textBox_targetAlt" HorizontalAlignment="Left" Height="22" Margin="95,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="The altitude you want to reach"/>
-                    <Label x:Name="label6" Content="ft" HorizontalAlignment="Left" Margin="189,52,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <Label x:Name="label7" Content="Target distance" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <TextBox x:Name="textBox_targetDistance" HorizontalAlignment="Left" Height="22" Margin="95,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="The distance you want to cover while descending"/>
-                    <Label x:Name="label8" Content="mi" HorizontalAlignment="Left" Margin="189,78,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <Label x:Name="label11" Content="Target rate of descent" HorizontalAlignment="Left" Margin="0,104,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBox_targetRateOfDescent" HorizontalAlignment="Left" Height="23" Margin="125,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" ToolTip="The rate of descent that is aimed for"/>
-                    <Label x:Name="label12" Content="ft/min" HorizontalAlignment="Left" Margin="189,104,0,0" VerticalAlignment="Top"/>
+    <Grid Margin="0">
+        <TabControl x:Name="tabControl" Margin="0,0,0,22">
+            <TabItem x:Name="ToC_ToD" Header="ToD/ToC" Margin="-2,-2,-2,2">
+                <Grid Background="#FFE5E5E5" Margin="0" Height="412">
+                    <Label x:Name="label" Content="Top of Descent/Climb" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top"/>
+                    <Grid Margin="15,40,10,0" VerticalAlignment="Top">
+                        <TextBox x:Name="textBox_currentIAS" HorizontalAlignment="Left" Height="22" Margin="95,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Current Indicated Airspeed"/>
+                        <Label x:Name="label1" Content="IAS" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <Label x:Name="label2" Content="Altitude" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <TextBox x:Name="textBox_currentAlt" HorizontalAlignment="Left" Height="22" Margin="95,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Current altitude"/>
+                        <Label x:Name="label3" Content="ft" HorizontalAlignment="Left" Margin="189,26,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <Label x:Name="label4" Content="kn" HorizontalAlignment="Left" Margin="189,0,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <Label x:Name="label5" Content="Target altitude" HorizontalAlignment="Left" Margin="0,52,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <TextBox x:Name="textBox_targetAlt" HorizontalAlignment="Left" Height="22" Margin="95,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="The altitude you want to reach"/>
+                        <Label x:Name="label6" Content="ft" HorizontalAlignment="Left" Margin="189,52,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <Label x:Name="label7" Content="Target distance" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <TextBox x:Name="textBox_targetDistance" HorizontalAlignment="Left" Height="22" Margin="95,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="The distance you want to cover while descending"/>
+                        <Label x:Name="label8" Content="mi" HorizontalAlignment="Left" Margin="189,78,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <Label x:Name="label11" Content="Target rate of descent" HorizontalAlignment="Left" Margin="0,104,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="textBox_targetRateOfDescent" HorizontalAlignment="Left" Height="23" Margin="125,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" ToolTip="The rate of descent that is aimed for"/>
+                        <Label x:Name="label12" Content="ft/min" HorizontalAlignment="Left" Margin="189,104,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                    <GroupBox x:Name="groupBox" Header="Input" Margin="10,26,10,0" VerticalAlignment="Top" Height="159" Panel.ZIndex="-1"/>
+                    <GroupBox x:Name="groupBox1" Header="Results" Margin="10,190,10,0" VerticalAlignment="Top" Height="167" Panel.ZIndex="-1"/>
+                    <Grid Margin="15,204,10,66" Panel.ZIndex="1" VerticalAlignment="Top">
+                        <Label x:Name="label9" Content="Speed" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <TextBox x:Name="textBox_resultSpeed" HorizontalAlignment="Left" Height="23" Margin="95,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Speed in miles/minute"/>
+                        <Label x:Name="label10" Content="mi/min" HorizontalAlignment="Left" Margin="189,0,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <Label x:Name="label13" Content="Distance travld" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <TextBox x:Name="textBox_resultDistanceTravelled" HorizontalAlignment="Left" Height="23" Margin="95,30,0,-1" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="The distance covered while descending"/>
+                        <Label x:Name="label14" Content="mi" HorizontalAlignment="Left" Margin="189,26,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <Label x:Name="label15" Content="Time travld" HorizontalAlignment="Left" Margin="0,52,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <TextBox x:Name="textBox_resultTimeTravelled" HorizontalAlignment="Left" Height="23" Margin="95,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Time until targeted altitude is reached"/>
+                        <Label x:Name="label16" Content="min" HorizontalAlignment="Left" Margin="189,52,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <Label x:Name="label17" Content="Desired ROD" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="textBox_resultROD" HorizontalAlignment="Left" Height="23" Margin="95,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89"/>
+                        <Label x:Name="label18" Content="ft/min" HorizontalAlignment="Left" Margin="189,78,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="label19" Content="ROD 3° desc" HorizontalAlignment="Left" Height="23" Margin="0,104,0,0" VerticalAlignment="Top" Width="89"/>
+                        <TextBox x:Name="textBox_resultROD3deg" HorizontalAlignment="Left" Height="23" Margin="95,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89"/>
+                        <Label x:Name="label18_Copy" Content="ft/min" HorizontalAlignment="Left" Margin="189,104,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                    <Button x:Name="button_calculate" Content="Calculate" HorizontalAlignment="Left" Margin="10,365,0,0" VerticalAlignment="Top" Width="75" Click="button_calculate_Click"/>
+                    <Button x:Name="button_clear" Content="Clear" HorizontalAlignment="Left" Margin="90,365,0,0" VerticalAlignment="Top" Width="75" Click="button_clear_Click"/>
                 </Grid>
-                <GroupBox x:Name="groupBox" Header="Input" Margin="10,26,10,0" VerticalAlignment="Top" Height="159" Panel.ZIndex="-1"/>
-                <GroupBox x:Name="groupBox1" Header="Results" Margin="10,190,10,0" VerticalAlignment="Top" Height="167" Panel.ZIndex="-1"/>
-                <Grid Margin="15,204,10,66" Panel.ZIndex="1" VerticalAlignment="Top">
-                    <Label x:Name="label9" Content="Speed" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <TextBox x:Name="textBox_resultSpeed" HorizontalAlignment="Left" Height="23" Margin="95,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Speed in miles/minute"/>
-                    <Label x:Name="label10" Content="mi/min" HorizontalAlignment="Left" Margin="189,0,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <Label x:Name="label13" Content="Distance travld" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <TextBox x:Name="textBox_resultDistanceTravelled" HorizontalAlignment="Left" Height="23" Margin="95,30,0,-1" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="The distance covered while descending"/>
-                    <Label x:Name="label14" Content="mi" HorizontalAlignment="Left" Margin="189,26,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <Label x:Name="label15" Content="Time travld" HorizontalAlignment="Left" Margin="0,52,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <TextBox x:Name="textBox_resultTimeTravelled" HorizontalAlignment="Left" Height="23" Margin="95,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Panel.ZIndex="1" ToolTip="Time until targeted altitude is reached"/>
-                    <Label x:Name="label16" Content="min" HorizontalAlignment="Left" Margin="189,52,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
-                    <Label x:Name="label17" Content="Desired ROD" HorizontalAlignment="Left" Margin="0,78,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBox_resultROD" HorizontalAlignment="Left" Height="23" Margin="95,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89"/>
-                    <Label x:Name="label18" Content="ft/min" HorizontalAlignment="Left" Margin="189,78,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label19" Content="ROD 3° desc" HorizontalAlignment="Left" Height="23" Margin="0,104,0,0" VerticalAlignment="Top" Width="89"/>
-                    <TextBox x:Name="textBox_resultROD3deg" HorizontalAlignment="Left" Height="23" Margin="95,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89"/>
-                    <Label x:Name="label18_Copy" Content="ft/min" HorizontalAlignment="Left" Margin="189,104,0,0" VerticalAlignment="Top"/>
+            </TabItem>
+            <TabItem x:Name="Fuel" Header="Fuel">
+                <Grid Background="#FFE5E5E5">
+                    <Grid Margin="10,10,15,0" VerticalAlignment="Top" Height="60">
+                        <ComboBox x:Name="comboBox" Margin="10,41,10,-3" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <Button x:Name="button" Content="Load Data" HorizontalAlignment="Left" Margin="169,18,0,0" VerticalAlignment="Top" Width="75" Panel.ZIndex="1"/>
+                        <Label x:Name="label20" Content="Type:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Panel.ZIndex="1"/>
+                        <GroupBox x:Name="groupBox2" Header="FSE Aircraft Data" Margin="0,0,0,-10"/>
+                    </Grid>
                 </Grid>
-                <Button x:Name="button_calculate" Content="Calculate" HorizontalAlignment="Left" Margin="10,365,0,0" VerticalAlignment="Top" Width="75" Click="button_calculate_Click"/>
-                <Button x:Name="button_clear" Content="Clear" HorizontalAlignment="Left" Margin="90,365,0,0" VerticalAlignment="Top" Width="75" Click="button_clear_Click"/>
-                <StatusBar x:Name="statusBar_ToDToC" VerticalAlignment="Bottom">
-                    <TextBlock x:Name="textBlock_statusBar_ToDToC" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                </StatusBar>
-            </Grid>
-        </TabItem>
-        <TabItem Header="Fuel">
-            <Grid Background="#FFE5E5E5"/>
-        </TabItem>
-    </TabControl>
+            </TabItem>
+        </TabControl>
+        <StatusBar x:Name="statusBar_ToDToC" VerticalAlignment="Bottom" Margin="0" Height="22">
+            <TextBlock x:Name="textBlock_statusBar_ToDToC" TextWrapping="Wrap" Margin="0" Height="22" Width="279"/>
+        </StatusBar>
+    </Grid>
 </Window>
