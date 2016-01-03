@@ -34,15 +34,17 @@ namespace flightcalc.context
 #endif
 
                 configurationFromFile = new XElement("config");
-                configurationFromFile.Save(configpath);
             }
         }
 
         public void saveConfigFile()
         {
             configurationFromFile.Save(configpath);
+#if DEBUG
+            Console.WriteLine("saved config");
+#endif
         }
-       
+
         public ConfigFileHandling()
         {
             loadOrCreateConfigFile();

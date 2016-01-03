@@ -22,6 +22,7 @@ namespace flightcalc.context
         private void createConfigStructure()
         {
             configuration["FSEconomy_Access_Key"] = configuration.ContainsKey("FSEconomy_Access_Key") ? configuration["FSEconomy_Access_Key"] : "";
+            configuration["FSEconomy_Aircraft_configs_datafeed_URL"] = configuration.ContainsKey("FSEconomy_Aircraft_configs_datafeed_URL") ? configuration["FSEconomy_Aircraft_configs_datafeed_URL"] : "";
         }
 
         /// <summary>
