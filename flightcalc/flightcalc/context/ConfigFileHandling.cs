@@ -34,7 +34,6 @@ namespace flightcalc.context
 #endif
 
                 configurationFromFile = new XElement("config");
-                configurationFromFile.Add(new XElement("CItem", new XAttribute("Name", "FSEconomy_Access_Key"), new XAttribute("Value", "abc")));
                 configurationFromFile.Save(configpath);
             }
         }
